@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import view.PipeDisplayer?>
+
+<BorderPane prefHeight="442.0" prefWidth="463.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainWindowController">
+   <top>
+      <MenuBar prefHeight="25.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <Menu mnemonicParsing="false" text="Change game">
+                  <MenuItem mnemonicParsing="false" onAction="#spongeBob" text="Sponge Bob" />
+                  <MenuItem mnemonicParsing="false" onAction="#dora" text="dora" />
+              </Menu>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="400.0" prefWidth="74.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Moves">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="20.0" right="2.0" top="2.0" />
+               </VBox.margin></Label>
+            <TextField fx:id="numMoves" editable="false" prefHeight="25.0" prefWidth="3.0">
+               <VBox.margin>
+                  <Insets left="2.0" />
+               </VBox.margin></TextField>
+            <Label text="Time">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="20.0" right="2.0" top="2.0" />
+               </VBox.margin></Label>
+            <TextField fx:id="numTime" editable="false" prefHeight="25.0" prefWidth="3.0">
+               <VBox.margin>
+                  <Insets left="2.0" />
+               </VBox.margin></TextField>
+            <Button fx:id="idFinish" mnemonicParsing="false" onAction="#finished" prefWidth="65.0" text="Finish">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#solve" prefWidth="65.0" text="Solve">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <TextField fx:id="idPort" prefHeight="25.0" prefWidth="3.0" promptText="    port">
+               <VBox.margin>
+                  <Insets left="2.0" top="2.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="ipAdd" prefHeight="25.0" prefWidth="3.0" promptText=" 127.0.0.1">
+               <VBox.margin>
+                  <Insets left="2.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label text="status" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+   
+      <PipeDisplayer fx:id="pipeDisplayer" height="399.0" width="400.0" BorderPane.alignment="CENTER" s="/spongeBoB/sadspongeBob.png" hor="/spongeBoB/horizontal.png"
+      seven="/spongeBoB/left-down.png" j="/spongeBoB/left-up.png" f="/spongeBoB/right-down.png" L="/spongeBoB/right-up.png" ver="/spongeBoB/vertical.png"
+      g="/spongeBoB/spongepinnapple.png" back="/spongeBoB/background.png"/>
+ 
+   </center>
+</BorderPane>
